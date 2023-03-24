@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "4d87407a-f2e3-4811-a732-36cc91c240c0",
+		"name": "Property API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7469764"
+	},
+	"item": [
+		{
+			"name": "Properties",
+			"item": [
+				{
+					"name": "Get Properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/properties",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Properties By Postcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/properties/postcode/TN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"properties",
+								"postcode",
+								"TN"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Property",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/properties/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"properties",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Property",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"4 Devonshire Road\",\n    \"postcode\": \"TN34 1NE\",\n    \"bedrooms\": 1,\n    \"bathrooms\": 1,\n    \"propertyType\": \"Flat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/properties",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Property",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"address\": \"5 Devonshire Road\",\n    \"postcode\": \"TN34 1NE\",\n    \"bedrooms\": 1,\n    \"bathrooms\": 1,\n    \"propertyType\": \"Flat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/properties/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"properties",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Property",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/properties/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"properties",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Root route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5009/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5009",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
