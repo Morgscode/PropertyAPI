@@ -91,11 +91,13 @@ namespace PropertyApi.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptior);
             var jwt = tokenHandler.WriteToken(token);
 
-            return Ok(new
-            {
-                User = user,
-                Token = jwt
-            });
+			var response = new
+			{
+				User = user,
+				Token = jwt
+			};
+
+            return Ok(response);
         }
 	}
 }
