@@ -34,4 +34,3 @@ namespace PropertyApi.Models
         public string LastName { get; set; }
     }
 }
-
