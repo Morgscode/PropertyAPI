@@ -235,14 +235,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5009/",
-					"protocol": "http",
+					"raw": "{{dev_domain}}",
 					"host": [
-						"localhost"
-					],
-					"port": "5009",
-					"path": [
-						""
+						"{{dev_domain}}"
 					]
 				}
 			},

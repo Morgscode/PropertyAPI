@@ -58,7 +58,7 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
-app.MapGet("/", (Func<string>)(() => "OK"));
+app.MapGet("/", (Func<string>)(() => "Welcome to PropertyAPI v1"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
