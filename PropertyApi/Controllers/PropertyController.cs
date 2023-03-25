@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
@@ -50,7 +48,8 @@ namespace PropertyApi.Controllers
             return Ok(properties);
         }
 
-		[HttpPost]
+        [Authorize]
+        [HttpPost]
 		public ActionResult<Property> CreateProperty(Property property)
 		{
             if (!ModelState.IsValid)
@@ -79,7 +78,8 @@ namespace PropertyApi.Controllers
             }
 		}
 
-		[HttpPut("{id}")]
+        [Authorize]
+        [HttpPut("{id}")]
 		public IActionResult UpdateProperty(int id, Property property)
 		{
 			if (id != property.Id)
@@ -113,7 +113,8 @@ namespace PropertyApi.Controllers
 			return NoContent();
 		}
 
-		[HttpDelete("{id}")]
+        [Authorize]
+        [HttpDelete("{id}")]
 		public IActionResult DeleteProperty(int id)
 		{
 			var property = _context.Properties.Find(id);
